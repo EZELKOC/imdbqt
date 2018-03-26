@@ -31,7 +31,7 @@ class Ui_KayitWindow(object):
         email = self.email_label_kayit.text()
         password = self.parola_label_kayit.text()
 
-        connection = sqlite3.connect('/home/loop/imdb/databases.db',timeout=10)
+        connection = sqlite3.connect('/home/user/imdb/databases.db',timeout=10)
         connection.execute(" INSERT INTO 'Kullanicilar' VALUES(?,?,?)", (username,email,password))
         connection.commit()
         connection.close()
